@@ -1,4 +1,4 @@
-# Link: minCostClimbingStairs
+# Link: https://leetcode.com/problems/min-cost-climbing-stairs/description/
 '''
 TC: O(n)
 SC: O(1) as we are updating the original array
