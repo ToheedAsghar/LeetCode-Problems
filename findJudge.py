@@ -14,8 +14,10 @@ class Solution:
             if outgoing[i] == 0 and incoming[i] == n-1:
                 return i
         return -1
-    
-    def findJudgeII(self, n: int, trust: List[List[int]]) -> int:
+
+    # Naive Solution 
+    # TC:O(k) where k = len(trust) | SC: O(n)
+    def findJudgeII(self, n: int, trust: List[List[int]]) -> int: 
        
         # edge case
         if 1 == n and 0 == len(trust):
