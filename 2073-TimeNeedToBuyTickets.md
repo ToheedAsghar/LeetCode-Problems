@@ -17,7 +17,7 @@ while tickets:
   if person on the right wants to buy less tickets than the person of interest:
     time += person_right_time
   if person on the right wants to buy more tickets than the person of interest:
-    time += person_of_interest_time
+    time += person_of_interest_time - 1
 return time
 ```
 
