@@ -9,8 +9,4 @@ class Solution:
             if s[i] == t[j]:
                 j += 1
             i += 1
-
-        if j == m:
-            return 0
-        else:
-            return m - j
+        return m - j
