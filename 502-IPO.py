@@ -12,12 +12,9 @@ class Solution:
         i: int = 0
         
         while k:
-            while i < n:
-                if w >= zipped[i][0]:
-                    heapq.heappush(heap, -zipped[i][1])
-                    i += 1
-                else:
-                    break
+            while i < n and w >= zipped[i][0]:
+                heapq.heappush(heap, -zipped[i][1])
+                i += 1
             
             if not heap:
                 break
