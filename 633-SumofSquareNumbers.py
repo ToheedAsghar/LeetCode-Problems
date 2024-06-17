@@ -1,3 +1,6 @@
+# TC: O(sqrt(c))
+# SC: O(1)
+
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
         a: int = 0
