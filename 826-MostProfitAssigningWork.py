@@ -1,26 +1,25 @@
-# TC: O(NlogN + KlogK)
-# SC: O(N + K)
+# TC: O(NlogN + K)
+# SC: O(N)
 
 from typing import List
-import heapq
 
 class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         maxProfit: int = 0
-        heap: List[] = []
         n: int = len(difficulty)
         i: int = 0
+        currMax: int = 0
 
         zipped = sorted(list(zip(difficulty, profit)))
         difficulty, profit = zip(*zipped)
         worker.sort()
-        
+
         for diff in worker:
             while i < n and difficulty[i] <= diff:
-                heapq.heappush(heap, -profit[i])
+                currMax = max(currMax, profit[i])
                 i += 1
-            if heap:
-                maxProfit += abs(heap[0])
+            
+            maxProfit += currMax
 
         return maxProfit
 
