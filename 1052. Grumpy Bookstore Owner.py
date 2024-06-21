@@ -9,16 +9,16 @@ from typing import List
 class Solution:
     def maxSatisfied(self, customers: List[int], grumpy: List[int], minutes: int) -> int:
         runningSum: int = 0
+        maxSum = runningSum
         i: int = 0
         j: int = 0
-        temp: int = minutes
+        n: int = len(customers)
+
         while temp:
             runningSum += customers[j]
             temp -= 1
             j += 1
 
-        maxSum = runningSum
-        n: int = len(customers)
         while j < n:
             while grumpy[j] and (j - i) > minutes - 1:
                 if grumpy[i]:
